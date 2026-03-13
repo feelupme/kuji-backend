@@ -1,7 +1,9 @@
 const express = require('express');
 const mysql = require('mysql2/promise');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // 🗄️ 대표님의 Railway DB 정보로 수정하는 곳!
@@ -87,3 +89,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`서버가 ${PORT}번 포트에서 실행 중입니다 🚀`);
 });
+
