@@ -8,8 +8,8 @@ app.use(express.json());
 
 // 🗄️ 대표님의 Railway DB 정보로 수정하는 곳!
 const pool = mysql.createPool({
-    host: 'mysql.railway.internal',
-    port: 3306, // 여기에_MYSQLPORT_숫자입력
+    host: 'mysql-production-6029.up.railway.app',
+    port: 45124, // 여기에_MYSQLPORT_숫자입력
     user: 'root', // 보통 root 입니다
     password: 'zTKRkTjEsgfikDIAgRRYANmSOoWbMbfu',
     database: 'railway', // 보통 railway 입니다
@@ -89,4 +89,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`서버가 ${PORT}번 포트에서 실행 중입니다 🚀`);
 });
+
 
