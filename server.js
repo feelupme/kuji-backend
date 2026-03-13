@@ -14,7 +14,8 @@ const pool = mysql.createPool({
     password: 'zTKRkTjEsgfikDIAgRRYANmSOoWbMbfu',
     database: 'railway', // 보통 railway 입니다
     waitForConnections: true,
-    connectionLimit: 10
+    connectionLimit: 10,
+    ssl: { rejectUnauthorized: false
 });
 
 // 🪄 DB 뼈대 자동 생성 마법 함수
@@ -89,5 +90,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`서버가 ${PORT}번 포트에서 실행 중입니다 🚀`);
 });
+
 
 
